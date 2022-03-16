@@ -1,0 +1,229 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #222;
+    --primary-color: #E84E89;
+    --border-color: #F2F2F2;
+    --header-height: 120px;
+    --header-height-mobile: 80px;
+    --border-radius: 16px;
+}
+
+* {
+    color: #fff;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: "Poppins","Nunito Sans","Montserrat",sans-serif;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Montserrat",sans-serif;
+}
+
+
+.website::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    background: -webkit-gradient(linear,left top,right bottom,from(#6d327c),color-stop(#485DA6),color-stop(#00a1ba),color-stop(#01b18e),to(#32b37b));
+    background: -o-linear-gradient(left top,#6d327c,#485DA6,#00a1ba,#01b18e,#32b37b);
+    background: linear-gradient(to right bottom,#6d327c,#485DA6,#00a1ba,#01b18e,#32b37b);
+}
+
+.display {
+    display: block !important;
+}
+
+
+.primary-btn {
+    background-color: var(--primary-color);
+    border-radius: 18px;
+    height: 39px;
+    min-width: 80px;
+    padding: 0 12px;
+    color: var(--white-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 39px;
+    cursor: pointer;
+    transition: transform ease 0.4s;
+}
+
+.primary-btn:active {
+    filter: opacity(0.8);
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* HEADER */
+
+/* Icon navigation mobile */
+.header__icon-nav {
+    cursor: pointer;
+    display: none;
+    z-index: 20;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: var(--white-color);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change-nav .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change-nav .bar2 {opacity: 0;}
+  
+  .change-nav .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+    border-bottom: 2px solid rgba(65, 196, 173, 0.5);
+}
+
+
+.logo-link {
+    font-size: 4rem;
+    color: var(--white-color);
+    display: block;
+}
+
+.header__navigation {
+    margin-left: auto;
+    z-index: 20;
+}
+
+.navigation-list {
+    display: flex;
+}
+
+.navigation-item {
+    margin-right: 30px;
+}
+
+.navigation-link {    
+    color: var(--white-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.fanpage-nav {
+    padding: 0 18px;
+}
+.fanpage-title {
+    padding-right: 8px;
+}
+
+
+.over-play {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+}
+
+/* TEXT HOVER */
+.text-hover {
+    text-decoration: none;
+    background-image: linear-gradient(to right,#00bec1 0%,#00bec1 100%);
+    background-size: 0px 4px;
+    background-repeat: no-repeat;
+    background-position: left 87%;
+    padding-bottom: 5px;
+    transition: background-size 1s;
+}
+.text-hover:hover {
+    background-size: 100% 4px;
+}
+.text-hover:active {
+    color: var(--primary-color);
+}
+
+@keyframes text-hover {
+    from {
+        opacity: 0;
+        width: 0;
+    }
+    to {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+
+.footer {
+    margin-top: 16px;
+    color: var(--white-color);
+}
+.footer-header {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(65, 196, 173, 0.5);
+
+}
+.about-us {
+}
+.about-us-des {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 12px 14px 12px 0;
+    text-align: justify;
+    line-height: 26px;
+}
+.recent-post .popular-item {
+    border: none;
+}
+.recent-post .popular-item-time, .recent-post .popular-item-title {
+    color: var(--white-color);
+}
+.recent-post .popular-item-title:active {
+    color: var(--primary-color);
+}
+.facebook-plugin {
+    margin: 12px auto;
+    text-align: center;
+}
