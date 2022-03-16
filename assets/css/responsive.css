@@ -38,6 +38,9 @@
         left: 16px;
         animation: nav-mobile ease-out 0.4s;
     }
+    .content-wrapper {
+        margin-bottom: 10px;
+    }
     
     @keyframes nav-mobile {
         from {
@@ -99,6 +102,9 @@
     }
     .about-us-des {
         padding: 12px 0;
+    }
+    .content-item.l-6:first-child {
+        margin-bottom: 11px;
     }
 
 }

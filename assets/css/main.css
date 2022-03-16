@@ -10,8 +10,8 @@
     border-bottom: 2px solid rgba(65, 196, 173, 0.5);
 }
 
-.content {
-
+.content-wrapper {
+    margin-bottom: 16px;
 }
 
 .content-article {
