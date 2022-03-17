@@ -18,3 +18,10 @@ overPlay.onclick = function () {
     headerNav.classList.toggle('display');
     this.classList.toggle('display');
 }
+
+var textHover = document.querySelectorAll('.co-trang');
+for (i = 0; i < textHover.length; i++) {
+    textHover[i].innerHTML = '"Hoa nở hoa rơi hoa đầy trời, <br>Tình đến tình đi tình tùy duyên..."';
+}
+
+// console.log(textHover[1])
