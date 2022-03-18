@@ -175,6 +175,13 @@
     outline: none;
 }
 
+.pagination-btn.disable {
+    background-color: #999;
+    transform: none;
+    filter: none;
+    cursor: context-menu;
+}
+
 
 .content-img-view {
     width: 100%;
