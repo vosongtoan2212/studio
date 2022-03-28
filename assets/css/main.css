@@ -100,13 +100,13 @@
     font-weight: 600;
     height: 68px;
     line-height: 68px;
-    border-bottom: 2px solid #E9F2FD;
+    border-bottom: 1px solid rgba(65, 196, 173, 0.5);
     margin-bottom: 24px;
 }
 .popular-item {
     display: flex;
     align-items: center;
-    border-bottom: 1px dotted #E9F2FD;
+    /* border-bottom: 1px dotted rgba(65, 196, 173, 0.5); */
     padding: 12px 0;
 }
 .popular-item-wrapper-img {
@@ -139,14 +139,14 @@
     font-size: 1.6rem;
     font-weight: 500;
     color: var(--text-color);
-    margin-bottom: 16px;
+    margin-bottom: 6px;
 }
 .popular-item-title {
     display: inline;
     font-size: 1.6rem;
     font-weight: 600;
     color: var(--text-color);
-    line-height: 2.6rem;
+    line-height: 24px;
     max-height: 40px;
     overflow: hidden;
     /* display: -webkit-inline-box;

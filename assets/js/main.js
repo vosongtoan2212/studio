@@ -18,10 +18,22 @@ overPlay.onclick = function () {
     headerNav.classList.toggle('display');
     this.classList.toggle('display');
 }
+// Navigation mobile
 
-var textHover = document.querySelectorAll('.co-trang');
-for (i = 0; i < textHover.length; i++) {
-    textHover[i].innerHTML = '"Hoa nở hoa rơi hoa đầy trời, <br>Tình đến tình đi tình tùy duyên..."';
+
+// Pagination
+var url = window.location.href
+var numberOfPage = parseInt(url.slice(-6, -5));
+var backBtn = document.querySelector('.pagination-btn.back');
+var nextBtn = document.querySelector('.pagination-btn.next');
+var numberOfPageNext = numberOfPage + 1;
+
+if (numberOfPage == 2) {
+    backBtn.setAttribute("href", `./`);
+} else if (numberOfPage > 2) {
+    backBtn.setAttribute("href", `./trang-${numberOfPage - 1}.html`);
 }
 
-// console.log(textHover[1])
+if (numberOfPage > 1) {
+    nextBtn.setAttribute("href", `./trang-${numberOfPage + 1}.html`);
+}
