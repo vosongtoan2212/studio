@@ -37,3 +37,6 @@ if (numberOfPage == 2) {
 if (numberOfPage > 1) {
     nextBtn.setAttribute("href", `./trang-${numberOfPage + 1}.html`);
 }
+
+
+// Pagination
