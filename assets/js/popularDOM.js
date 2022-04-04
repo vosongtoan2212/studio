@@ -2,7 +2,7 @@
 // POPULAR LIST
 var popularList = albumData.map(function (album) {
     return `
-        <a href="${album.link}" class="popular-item">
+        <a href=".${album.link}" class="popular-item">
             <div class="popular-item-wrapper-img"><div class="popular-item-img" style="background-image: url('.${album.image}');"></div></div>
             <div class="popular-item-des">
                 <div class="popular-item-time">${album.time}</div>

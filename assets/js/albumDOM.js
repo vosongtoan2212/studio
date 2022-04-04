@@ -20,7 +20,7 @@ document.querySelector('.content-row').innerHTML = albumList.join('');
 // POPULAR LIST
 var popularList = albumData.map(function (album) {
     return `
-        <a href="${album.link}" class="popular-item">
+        <a href="./album${album.link}" class="popular-item">
             <div class="popular-item-wrapper-img"><div class="popular-item-img" style="background-image: url('${album.image}');"></div></div>
             <div class="popular-item-des">
                 <div class="popular-item-time">${album.time}</div>
@@ -29,20 +29,9 @@ var popularList = albumData.map(function (album) {
         </a>
     `
 });
-document.querySelector('.popular-item-wrapper').innerHTML = popularList.join('');
-document.querySelector('.recent-post-wrapper').innerHTML = popularList.join('');
+document.querySelector('.popular-item-wrapper').innerHTML = popularList.slice(0, 4).join('');
+document.querySelector('.recent-post-wrapper').innerHTML = popularList.slice(0, 4).join('');
 
 
 
-var paginationList = [];
-for (var i = 2; i < 6; i++) {
-    paginationList = paginationList.concat(`<a class="pagination-number-btn primary-btn" href="./trang-${i}.html">${i}</a>`)
-}
-document.querySelector('.pagination-number').innerHTML = paginationList.join('');
 
-var paginationListItem = document.querySelectorAll('.pagination-number-btn')
-
-if (paginationListItem[numberOfPage-1].innerHTML == numberOfPage) {
-    paginationListItem[numberOfPage-1].classList.add("disable")
-    paginationListItem[numberOfPage-1].removeAttribute("href");
-}
