@@ -2,7 +2,7 @@
 var albumList = albumData.map(function (album) {
     return `
         <article class="content-article col l-6 m-6 c-12">
-        <a href="${album.link}" class="content-article-link">
+        <a href="./album${album.link}" class="content-article-link">
             <span class="content-article-img" style="background-image: url('${album.image}');"></span>
             <div class="content-article-info">
                 <div class="content-article-time">${album.time}</div>
