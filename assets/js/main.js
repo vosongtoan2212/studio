@@ -27,6 +27,7 @@ var numberOfPage = parseInt(url.slice(-6, -5));
 var backBtn = document.querySelector('.pagination-btn.back');
 var nextBtn = document.querySelector('.pagination-btn.next');
 var numberOfPageNext = numberOfPage + 1;
+var totalPage = 5;
 
 if (numberOfPage == 2) {
     backBtn.setAttribute("href", `./`);
@@ -38,8 +39,9 @@ if (numberOfPage > 1 && numberOfPage < totalPage) {
     nextBtn.setAttribute("href", `./trang-${numberOfPage + 1}.html`);
 }
 
+console.log(numberOfPage, totalPage);
+
 // Pagination number
-var totalPage = 5;
 var paginationList = [];
 for (var i = 2; i < totalPage + 1; i++) {
     paginationList = paginationList.concat(`<a class="pagination-number-btn primary-btn" href="./trang-${i}.html">${i}</a>`)
